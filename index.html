@@ -31,16 +31,12 @@
             });
 
             /* データの保存 */
-            const save = document.getElementById('save');
-
-            save.addEventListener('click', () => {
-                editor.save()
-                .then((savedData) => {
-
-                    console.log(savedData);
-
-                });
-            });
+            document.querySelector("button").onclick = ()=> {
+	editorjs.save().then((outputData) => {
+		document.querySelector("textarea").value = JSON.stringify(outputData,null,"\t")
+	}).catch((error) => {
+		console.log('Saving failed: ', error)
+	});
         </script>
     </body>
 </html>
