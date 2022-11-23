@@ -10,7 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
     </head>
     <body>
-        <div id="editor"></div>
+        <div id="editor"></div>_
         <button id="save">保存</button>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
@@ -37,10 +37,10 @@
                 editorJS
                     .save()
                     .then((outputData) => {
-                        console.log("input Data ", outputData);
+                        document.write("input Data ", outputData);
                     })
                     .catch((error) => {
-                        console.log("failed: ", error);
+                        document.write("failed: ", error);
                     });
             });
         </script>
