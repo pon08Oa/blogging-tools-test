@@ -36,9 +36,9 @@
             save.addEventListener('click', () => {
 
                 editor.save().then((outputData) => {
-                    console.log('Article data: ', outputData)
+                    document.write('Article data: ', outputData)
                 }).catch((error) => {
-                    console.log('Savaing failed: ', error)
+                    document.write('Savaing failed: ', error)
                 });
             });
         </script>
