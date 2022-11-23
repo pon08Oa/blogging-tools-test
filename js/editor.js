@@ -1,5 +1,3 @@
 import EditorJS from '@editorjs/editorjs'
 
-const editor = new EditorJS({
-    holder: 'editor'
-});
+const editor = new EditorJS();
