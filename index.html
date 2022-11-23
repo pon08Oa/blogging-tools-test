@@ -11,12 +11,14 @@
     </head>
     <body>
         <div id="editor"></div>
+        <button id="save">保存</button>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
         <script>
+            /* エディターの設定 */
             const editor = new EditorJS({
                 holder: 'editor',
                 tools: {
@@ -27,7 +29,11 @@
                     code: CodeTool
                 }
             });editor
-            
+
+            /* データの保存 */
+            const save = document.getElementById('save');
+            save.addEventListener('click', () => {
+            })
         </script>
     </body>
 </html>
