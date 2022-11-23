@@ -31,13 +31,17 @@
             });editor
 
             /* データの保存 */
-            const save = document.getElementById('save');
-            save.addEventListener('click', () => {
-            editor.save().then((outputData) => {
-                console.log('Article data: ', outputData)
-            }).catch((error) => {
-                console.log('Saving failed: ', error)
-            });
+            const btn = document.querySelector("button");
+
+            btn.addEventListener("click", function () {
+                editorJS
+                    .save()
+                    .then((outputData) => {
+                        console.log("input Data ", outputData);
+                    })
+                    .catch((error) => {
+                        console.log("failed: ", error);
+                    });
             });
         </script>
     </body>
