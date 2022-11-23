@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="editor"></div>_
-        <button id="save">保存</button>
+        <button id="save">記事を保存する</button>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
@@ -31,17 +31,15 @@
             });editor
 
             /* データの保存 */
-            const btn = document.querySelector("button");
+            const save = document.getElementById('save');
 
-            btn.addEventListener("click", function () {
-                editorJS
-                    .save()
-                    .then((outputData) => {
-                        document.write("input Data ", outputData);
-                    })
-                    .catch((error) => {
-                        document.write("failed: ", error);
-                    });
+            save.addEventListener('click', () => {
+                editor.save()
+                .then((savedData) => {
+
+                    console.log(savedData);
+
+                });
             });
         </script>
     </body>
