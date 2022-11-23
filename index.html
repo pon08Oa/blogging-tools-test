@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="editor"></div>
-        <button id="save">記事を保存する</button>
+        <button onClick='downloadTest("sample.txt","test")'>保存</button>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
@@ -37,7 +37,7 @@
                 editor.save()
                 .then((savedData) => {
 
-                    document.write(savedData);
+                    test(savedData);
 
                 });
             });
