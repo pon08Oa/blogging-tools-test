@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="editor"></div>
-        <button onClick='downloadTest("sample.txt","test")'>保存</button>
+        <button id="save">保存</button>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
@@ -31,7 +31,16 @@
             });
 
             /* データの保存 */
-            
+            const save = document.getElementById('save');
+
+            save.addEventListener('click', () => {
+
+                editor.save().then((outputData) => {
+                    console.log('Article data: ', outputData)
+                }).catch((error) => {
+                    console.log('Savaing failed: ', error)
+                });
+            });
         </script>
     </body>
 </html>
