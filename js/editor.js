@@ -1,5 +1,10 @@
-import EditorJS from '@editorjs/editorjs';
-
 const editor = new EditorJS({
-    holderId: 'editorjs'
-})
+    holder: 'editor',
+    tools: {
+        header: Header,
+        list: List,
+        checklist: Checklist,
+        quote: Quote,
+        code: Codetool
+    }
+});
