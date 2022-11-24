@@ -17,5 +17,10 @@
 
 .btn1 {
     color: #fff;
-    background-color: aqua;
+    background-color: #eb6100;
+}
+
+.btn1:hover {
+    color: #fff;
+    background-color: #f56500;
 }
