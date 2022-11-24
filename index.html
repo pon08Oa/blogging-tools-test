@@ -30,16 +30,6 @@
                     code: CodeTool,
                 }
             });
-
-            event.preventDefault(); //buttonの機能停止:リロード防止
-
-            /* LocalStorageに保存する */
-            textData = editor;
-            return textData;
-            localStorage.setItem('data', JSON.stringify(textData));
-
-            /* データの保存 */
-            
         </script>
     </body>
 </html>
