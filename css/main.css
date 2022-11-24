@@ -13,6 +13,7 @@
 #data {
     margin-right: 5%;
     margin-left: 5px;
+    background-color: snow;
 }
 
 .btn1 {
@@ -22,4 +23,14 @@
     color: #ffffff;
     padding: 8px 16px;
     font-size: 16px;
+}
+
+#to-html {
+    float: left;
+    background-color: snow;
+}
+
+.pre {
+    margin-right: 5%;
+    margin-left: 5%;
 }
