@@ -10,7 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
     </head>
     <body>
-        <div id="editor"></div>
+        <div id="editorjs"></div>
         <button>保存する</button>
         <textarea></textarea>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
@@ -20,26 +20,11 @@
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
         <script>
             /* エディターの設定 */
-            const editor = new EditorJS({
-                holder: 'editor',
-                minHeight: 30,
-                tools: {
-                    header: Header,
-                    list: List,
-                    checklist: Checklist,
-                    quote: Quote,
-                    code: CodeTool,
-                }
-            });
-
-            /* データをセーブする */
-            document.querySelector("button").onclick = ()=> {
-                Editorjs.save().then((outputData) => {
-                    document.querySelector("textarea").value = JSON.stringify(outputData,null,"\t")
-                }).catch((error) => {
-                    console.log('Saving failed: ', error)
-                })
-            }
+            window.addEventListener('DOMContentLoaded', (e) => {
+                editor = new EditorJS({
+                    holder: 'editorjs'
+                });
+            })
         </script>
     </body>
 </html>
