@@ -1,11 +1,25 @@
 const editor = new EditorJS({
     holder: 'editorjs',
     tools: {
-        header: Header,
-        list: List,
-        checklist: Checklist,
-        quote: Quote,
-        code: CodeTool,
+        header: {
+            class: Headers,
+            config: {
+                placeholder: "見出しを入力してください",
+                defaultLevel: 2,
+            }
+        },
+        list: {
+            class: List,
+        },
+        checklist: {
+            class: Checklist,
+        },
+        quote: {
+            class: Quote,
+        },
+        code: {
+            class: CodeTool,
+        },
     },
     minHeight: 30,
 });
