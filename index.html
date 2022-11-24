@@ -32,6 +32,16 @@
                     },
                 });
             })
+
+            let saveBtn = document.querySelector('button');
+
+            saveBtn.addEventListener('click', function() {
+                editor.saver().then((outputData) => {
+                    console.log('Article data: ', outputData)
+                }).catch((error) => {
+                    console.log('Saved failed: ', error)
+                });
+            })
         </script>
     </body>
 </html>
