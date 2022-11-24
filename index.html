@@ -12,6 +12,7 @@
     <body>
         <div id="editor"></div>
         <a href="#" id="save-file" download="blogging-tool.json">ダウンロード</a>
+        <textarea></textarea>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
@@ -30,6 +31,15 @@
                     code: CodeTool,
                 }
             });
+
+            /* データをセーブする */
+            document.querySelector("button").onclick = ()=> {
+                Editorjs.save().then((outputData) => {
+                    document.querySelector("textarea").value = JSON.stringify(outputData,null,"\t")
+                }).catch((error) => {
+                    console.log('Saving failed: ', error)
+                })
+            }
         </script>
     </body>
 </html>
