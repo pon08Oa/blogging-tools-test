@@ -20,6 +20,9 @@ const editor = new EditorJS({
         code: {
             class: CodeTool,
         },
+        embed: {
+            class: Embed,
+        }
     },
     minHeight: 80,
 });
