@@ -31,19 +31,19 @@
                 }
             });
 
+            event.preventDefault(); //buttonの機能停止:リロード防止
+
+            /* LocalStorageに保存する */
+            textData = editor;
+            return textData;
+            localStorage.setItem('data', JSON.stringify(textData));
+
             /* データの保存 */
             editor.save().then((outputData) => {
                 document.write('Article data: ', outputData)
             }).catch((error) => {
                 document.write('Saving failed: ', error)
             });
-
-            /*ファイルのダウンロード */
-            document.getElementById('save-file').addEventListener('click', (event => {
-                const json = JSON.stringify({ a: 1, b: 2, c: 3 }, null, ' ');
-                const blob = new Blob([json], { type: 'application/json' });
-                event.currentTarget.href = window.URL.createObjectURL(blob);
-            }));
         </script>
     </body>
 </html>
