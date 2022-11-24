@@ -21,7 +21,7 @@ const editor = new EditorJS({
             class: CodeTool,
         },
     },
-    minHeight: 30,
+    minHeight: 80,
 });
 
 const pre = document.getElementById("data");
