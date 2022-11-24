@@ -19,8 +19,8 @@
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
         <script>
             /* エディターの設定 */
-            window.addEventListener('DOMContentLoaded', (e) => {
-                editor = new EditorJs({
+            
+                const editor = new EditorJS({
                     holder: 'editorjs',
                     tools: {
                         header : Header,
@@ -30,7 +30,7 @@
                         code : CodeTool,
                     },
                 });
-            })
+            
 
             let saveBtn = document.querySelector('button');
 
