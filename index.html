@@ -39,11 +39,7 @@
             localStorage.setItem('data', JSON.stringify(textData));
 
             /* データの保存 */
-            editor.save().then((outputData) => {
-                document.write('Article data: ', outputData)
-            }).catch((error) => {
-                document.write('Saving failed: ', error)
-            });
+            
         </script>
     </body>
 </html>
