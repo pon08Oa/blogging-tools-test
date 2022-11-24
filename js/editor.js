@@ -1,5 +1,12 @@
 const editor = new EditorJS({
     holder: 'editorjs',
+    tools: {
+        header: Headers,
+        list: List,
+        checklist: Checklist,
+        quote: Quote,
+        code: CodeTool,
+    }
 });
 
 const pre = document.getElementById("data");
