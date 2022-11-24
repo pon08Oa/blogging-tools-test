@@ -9,3 +9,13 @@
     margin-left: 5%;
     background-color: azure;
 }
+
+#data {
+    margin-right: 5%;
+    margin-left: 5px;
+}
+
+.btn1 {
+    color: #fff;
+    background-color: aqua;
+}
