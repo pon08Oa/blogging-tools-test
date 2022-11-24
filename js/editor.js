@@ -3,10 +3,6 @@ const editor = new EditorJS({
     tools: {
         header: {
             class: Headers,
-            config: {
-                placeholder: "見出しを入力してください",
-                defaultLevel: 2,
-            }
         },
         list: {
             class: List,
