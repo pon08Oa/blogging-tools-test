@@ -1,7 +1,7 @@
 const editor = new EditorJS({
     holder: 'editorjs',
     tools: {
-        header: Headers,
+        header: Header,
         list: List,
         checklist: Checklist,
         quote: Quote,
