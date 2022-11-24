@@ -16,11 +16,10 @@
 }
 
 .btn1 {
-    color: #fff;
-    background-color: #eb6100;
-}
-
-.btn1:hover {
-    color: #fff;
-    background-color: #f56500;
+    border: 0;
+    border-radius: 5px;
+    color: #4676d7;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 16px;
 }
