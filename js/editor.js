@@ -6,7 +6,8 @@ const editor = new EditorJS({
         checklist: Checklist,
         quote: Quote,
         code: CodeTool,
-    }
+    },
+    minHeight: 30,
 });
 
 const pre = document.getElementById("data");
