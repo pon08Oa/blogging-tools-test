@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="editor"></div>
-        <button id="save">保存</button>
+        <a href="#" id="save-file" download="blogging-tool.json">ダウンロード</a>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
@@ -37,6 +37,13 @@
             }).catch((error) => {
                 document.write('Saving failed: ', error)
             });
+
+            /*ファイルのダウンロード */
+            document.getElementById('save-file').addEventListener('click', (event => {
+                const json = JSON.stringify({ a: 1, b: 2, c: 3 }, null, ' ');
+                const blob = new Blob([json], { type: 'application/json' });
+                event.currentTarget.href = window.URL.createObjectURL(blob);
+            }));
         </script>
     </body>
 </html>
