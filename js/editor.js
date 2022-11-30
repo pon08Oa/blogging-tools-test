@@ -20,7 +20,7 @@ const editor = new EditorJS({
             class: Embed,
         }
     },
-    minHeight: 80,
+    minHeight: 150,
 });
 
 const pre = document.getElementById("data");
